@@ -1,12 +1,11 @@
 package am.vector.payroll.api.entity;
 
-import am.vector.payroll.constatns.RecordState;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-public class Person {
+public class Person extends AppEntity {
     @Id
     private String ssn;
     private String code;
@@ -16,10 +15,6 @@ public class Person {
     private String email;
     private String cell;
     private LocalDate birthday;
-    @Enumerated(EnumType.STRING)
-    private RecordState state;
-    private String tin;
-    private String recorderUUID;
 
     public Person() {
     }
@@ -86,29 +81,5 @@ public class Person {
 
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
-    }
-
-    public RecordState getState() {
-        return state;
-    }
-
-    public void setState(RecordState state) {
-        this.state = state;
-    }
-
-    public String getTin() {
-        return tin;
-    }
-
-    public void setTin(String tin) {
-        this.tin = tin;
-    }
-
-    public String getRecorderUUID() {
-        return recorderUUID;
-    }
-
-    public void setRecorderUUID(String recorderUUID) {
-        this.recorderUUID = recorderUUID;
     }
 }
