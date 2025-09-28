@@ -1,4 +1,4 @@
-package am.vector.payroll.entity;
+package am.vector.payroll.api.entity;
 
 import am.vector.payroll.constatns.RecordState;
 
@@ -6,20 +6,23 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "t_person")
 public class Person {
     @Id
     private String ssn;
     private String code;
-    private String first_name;
-    private String last_name;
-    private String middle_name;
+    private String firstName;
+    private String lastName;
+    private String middleName;
     private String email;
     private String cell;
     private LocalDate birthday;
-    private String state;
+    @Enumerated(EnumType.STRING)
+    private RecordState state;
     private String tin;
-    private String recorder_uuid;
+    private String recorderUUID;
+
+    public Person() {
+    }
 
     public String getSsn() {
         return ssn;
@@ -37,28 +40,28 @@ public class Person {
         this.code = code;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getMiddle_name() {
-        return middle_name;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public void setMiddle_name(String middle_name) {
-        this.middle_name = middle_name;
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getEmail() {
@@ -85,11 +88,11 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public String getState() {
+    public RecordState getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(RecordState state) {
         this.state = state;
     }
 
@@ -101,11 +104,11 @@ public class Person {
         this.tin = tin;
     }
 
-    public String getRecorder_uuid() {
-        return recorder_uuid;
+    public String getRecorderUUID() {
+        return recorderUUID;
     }
 
-    public void setRecorder_uuid(String recorder_uuid) {
-        this.recorder_uuid = recorder_uuid;
+    public void setRecorderUUID(String recorderUUID) {
+        this.recorderUUID = recorderUUID;
     }
 }

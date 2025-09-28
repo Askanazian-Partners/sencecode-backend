@@ -22,6 +22,7 @@ import java.util.Arrays;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
     DataSource dataSource;
 
@@ -29,15 +30,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
-                .cors().and()
+                .csrf()
+                .disable()
+                .cors()
+            .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST,"/api/v1.0/operator/").hasRole("ADMIN")
-                .anyRequest().authenticated().and()
-                .httpBasic().and()
-                .rememberMe()
-                .tokenValiditySeconds(2419200)
-                .key("spittrKey");
+                .antMatchers(HttpMethod.GET,"/person/").hasRole("ADMIN")
+                .anyRequest().authenticated()
+            .and()
+                .httpBasic();
     }
 
     @Override
@@ -47,9 +48,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(passwordEncoder())
                 .dataSource(dataSource)
                 .usersByUsernameQuery(
-                        "select username,password, enabled from users where username=?")
+                        "select username,password, enabled from user where username=?")
                 .authoritiesByUsernameQuery(
-                        "select username, role from user_roles where username=?");
+                        "select username, role from authority where username=?");
     }
 
     @Bean
