@@ -1,7 +1,7 @@
 package am.vector.payroll.config;
 
-import am.vector.payroll.api.entity.AppEntity;
-import am.vector.payroll.api.entity.UUIDEntity;
+import am.vector.payroll.entity.AppEntity;
+import am.vector.payroll.entity.UUIDEntity;
 import am.vector.payroll.constatns.RecordState;
 import org.springframework.data.rest.core.event.AbstractRepositoryEventListener;
 import org.springframework.stereotype.Component;

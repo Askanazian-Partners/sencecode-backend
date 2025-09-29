@@ -1,17 +1,14 @@
 package am.vector.payroll;
 
-import am.vector.payroll.api.validator.TimesheetValidator;
+import am.vector.payroll.api.v1.validator.TimesheetValidator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.annotation.Bean;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.rest.core.event.ValidatingRepositoryEventListener;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 
-import javax.sql.DataSource;
-
 @SpringBootApplication
+@EnableCaching
 public class PayrollApplication extends RepositoryRestConfigurerAdapter {
 
 	public static void main(String[] args) {
