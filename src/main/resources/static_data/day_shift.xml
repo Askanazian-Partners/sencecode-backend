@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<shiftDays>
+    <shift>
+        <fromDate>2018-04-30</fromDate>
+        <toDate>2018-05-05</toDate>
+        <text>2018 թվականի ապրիլի 30-ի աշխատանքային օրը տեղափոխել 2018 թվականի մայիսի 5-ը` շաբաթ օրը</text>
+        <decree>12 ապրիլի 2018 թվականի N 409-Ն</decree>
+        <reasonIsHoliday>true</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2018-04-02</fromDate>
+        <toDate>2018-04-07</toDate>
+        <text>2018 թվականի ապրիլի 2-ի աշխատանքային օրը տեղափոխել 2018 թվականի ապրիլի 7-ը` շաբաթ օրը</text>
+        <decree>6 մարտի 2018 թվականի N 219-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2018-03-09</fromDate>
+        <toDate>2018-03-17</toDate>
+        <text>2018 թվականի մարտի 9-ի աշխատանքային օրը տեղափոխել 2018 թվականի մարտի 17-ը` շաբաթ օրը</text>
+        <decree>25 հունվարի 2018 թվականի N 47-Ն</decree>
+        <reasonIsHoliday>true</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2017-09-18</fromDate>
+        <toDate>2017-09-23</toDate>
+        <text>2017 թվականի սեպտեմբերի 18-ի աշխատանքային օրը տեղափոխել 2017 թվականի սեպտեմբերի 23-ը` շաբաթ օրը</text>
+        <decree>17 օգոստոսի 2017 թվականի N 991-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2017-05-08</fromDate>
+        <toDate>2017-05-20</toDate>
+        <text>2017 թվականի մայիսի 8-ի աշխատանքային օրը տեղափոխել 2017 թվականի մայիսի 20-ը` շաբաթ օրը</text>
+        <decree>20 ապրիլի 2017 թվականի N 383-Ն</decree>
+        <reasonIsHoliday>true</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2017-04-17</fromDate>
+        <toDate>2017-05-06</toDate>
+        <text>2017 թվականի ապրիլի 17-ի աշխատանքային օրը տեղափոխել 2017 թվականի մայիսի 6-ը` շաբաթ օրը</text>
+        <decree>6 ապրիլի 2017 թվականի N 343-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2016-09-12</fromDate>
+        <toDate>2016-09-24</toDate>
+        <text>2016 թվականի սեպտեմբերի 12-ի աշխատանքային օրը տեղափոխել 2016 թվականի սեպտեմբերի 24-ը` շաբաթ օրը</text>
+        <decree>2 սեպտեմբերի 2016 թվականի N 881-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2016-03-28</fromDate>
+        <toDate>2016-04-02</toDate>
+        <text>2016 թվականի մարտի 28-ի աշխատանքային օրը տեղափոխել 2016 թվականի ապրիլի 2-ը` շաբաթ օրը</text>
+        <decree>17 մարտի 2016 թվականի N 257-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2016-03-07</fromDate>
+        <toDate>2016-03-12</toDate>
+        <text>2016 թվականի մարտի 7-ի աշխատանքային օրը տեղափոխել 2016 թվականի մարտի 12-ը` շաբաթ օրը</text>
+        <decree>18 փետրվարի 2016 թվականի N 133-Ն</decree>
+        <reasonIsHoliday>true</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2015-09-14</fromDate>
+        <toDate>2015-09-19</toDate>
+        <text>2015 թվականի սեպտեմբերի 14-ի աշխատանքային օրը տեղափոխել 2015 թվականի սեպտեմբերի 19-ը` շաբաթ օրը</text>
+        <decree>30 հուլիսի 2015 թվականի N 845-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2015-07-13</fromDate>
+        <toDate>2015-07-18</toDate>
+        <text>2015 թվականի հուլիսի 13-ի աշխատանքային երկուշաբթի օրը տեղափոխել 2015 թվականի հուլիսի 18-ը` շաբաթ օր</text>
+        <decree>11 հուլիսի 2015 թվականի N 750-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2015-04-23</fromDate>
+        <toDate>2015-04-18</toDate>
+        <text>2015 թվականի ապրիլի 23-ի աշխատանքային հինգշաբթի օրը տեղափոխել 2015 թվականի ապրիլի 18-ը` շաբաթ օր</text>
+        <decree>11 ապրիլի 2015 թվականի N 358-Ն</decree>
+        <reasonIsHoliday>true</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2015-04-06</fromDate>
+        <toDate>2015-04-11</toDate>
+        <text>2015 թվականի ապրիլի 6-ի աշխատանքային օրը տեղափոխել 2015 թվականի ապրիլի 11-ը` շաբաթ օրը</text>
+        <decree>2 ապրիլի 2015 թվականի N 307-Ն</decree>
+        <reasonIsHoliday>false</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2014-12-20</fromDate>
+        <toDate>2015-01-08</toDate>
+        <text>2015 թվականի հունվարի 8-ի և 9-ի աշխատանքային օրերը համապատասխանաբար տեղափոխել 2014 թվականի դեկտեմբերի 20-ը և 27-ը` շաբաթ</text>
+        <decree>4 դեկտեմբերի 2014 թվականի N 1355-Ն</decree>
+        <reasonIsHoliday>true</reasonIsHoliday>
+    </shift>
+    <shift>
+        <fromDate>2014-12-27</fromDate>
+        <toDate>2015-01-09</toDate>
+        <text>2015 թվականի հունվարի 8-ի և 9-ի աշխատանքային օրերը համապատասխանաբար տեղափոխել 2014 թվականի դեկտեմբերի 20-ը և 27-ը` շաբաթ </text>
+        <decree>4 դեկտեմբերի 2014 թվականի N 1355-Ն</decree>
+        <reasonIsHoliday>true</reasonIsHoliday>
+    </shift>
+</shiftDays>

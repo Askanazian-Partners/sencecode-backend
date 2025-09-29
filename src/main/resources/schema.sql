@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS person;
 DROP TABLE IF EXISTS authority;
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS company;
+DROP TABLE IF EXISTS workday;
 
 CREATE TABLE person(
   ssn CHAR(10) PRIMARY KEY,
@@ -200,6 +201,14 @@ CREATE TABLE timesheet (
   INDEX timesheet_period_ssn (tin, period, person_ssn),
   CONSTRAINT timesheet_ssn_fk FOREIGN KEY (person_ssn) REFERENCES person(ssn) ON DELETE CASCADE
 );
+
+CREATE TABLE workday (
+  day DATE PRIMARY KEY,
+  week_day ENUM('MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY'),
+  shift_day ENUM('NONE','TO_NONE_WORKING','TO_WORKING'),
+  holiday ENUM('NONE','JAN01_05','JAN06','JAN07','JAN28','MAR08','APR24','MAY01','MAY09','MAY28','JUL05','SEP21','DEC31')
+);
+
 
 CREATE  TABLE user (
   username VARCHAR(45) NOT NULL ,

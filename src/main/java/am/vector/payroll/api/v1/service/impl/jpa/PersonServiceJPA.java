@@ -17,6 +17,11 @@ public class PersonServiceJPA extends BaseServiceJPA implements PersonService {
 
     @Cacheable(value= "person", key = "#SSN")
     public Optional<Person> findById(String SSN){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return personRepository.findById(SSN);
     }
 
