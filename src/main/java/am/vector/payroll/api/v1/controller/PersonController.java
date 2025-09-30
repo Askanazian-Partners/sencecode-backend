@@ -4,6 +4,7 @@ import am.vector.payroll.entity.Person;
 import am.vector.payroll.api.v1.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -31,6 +32,12 @@ public class PersonController extends APIController {
 
     @RequestMapping(method = RequestMethod.POST, value = "/")
     public String add(@RequestBody String json){
+        Person object = personService.save(gson.fromJson(json, Person.class));
+        return gson.toJson(object);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/balk/")
+    public String addBalk(@RequestBody String json){
         Person object = personService.save(gson.fromJson(json, Person.class));
         return gson.toJson(object);
     }

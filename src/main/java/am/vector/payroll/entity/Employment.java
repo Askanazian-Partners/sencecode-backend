@@ -1,7 +1,6 @@
 package am.vector.payroll.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -10,7 +9,7 @@ public class Employment extends UUIDEntity {
     private LocalDate hireDate;
     private LocalDate terminationDate;
     private int vacationBalance;
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY, optional=false)
     private Person person;
 
     public LocalDate getHireDate() {
@@ -37,6 +36,7 @@ public class Employment extends UUIDEntity {
         this.vacationBalance = vacationBalance;
     }
 
+    @ManyToOne(fetch=FetchType.LAZY, optional=false)
     public Person getPerson() {
         return person;
     }
