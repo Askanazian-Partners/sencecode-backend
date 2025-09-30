@@ -8,4 +8,5 @@ import java.util.List;
 public interface WorkdayService{
     List<Workday> getDateRange(LocalDate start, LocalDate end);
     Workday getWorkday(LocalDate date);
+    Workday updateWorkday(Workday workday);
 }

@@ -35,4 +35,10 @@ public class WorkdayController extends APIController {
     public String getDay(@PathVariable String DAY){
         return gson.toJson(workdayService.getWorkday(LocalDate.parse(DAY)));
     }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/")
+    public String updateDay(@RequestBody String json){
+        Workday object = gson.fromJson(json, Workday.class);
+        return gson.toJson(workdayService.updateWorkday(object));
+    }
 }

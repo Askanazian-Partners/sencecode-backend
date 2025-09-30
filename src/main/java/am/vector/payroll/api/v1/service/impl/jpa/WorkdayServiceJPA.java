@@ -5,6 +5,8 @@ import am.vector.payroll.entity.Workday;
 import am.vector.payroll.repository.WorkdayRepository;
 import am.vector.payroll.util.DayUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
@@ -55,6 +57,12 @@ public class WorkdayServiceJPA extends BaseServiceJPA implements WorkdayService{
             workdayRepository.save(workDay);
         }
         return workDay;
+    }
+
+    @CacheEvict(value= "workday", key = "#workday.getDay()")
+    @CachePut(value= "workday", key = "#workday.getDay()")
+    public Workday updateWorkday(Workday workday){
+        return workdayRepository.save(workday);
     }
 
 
