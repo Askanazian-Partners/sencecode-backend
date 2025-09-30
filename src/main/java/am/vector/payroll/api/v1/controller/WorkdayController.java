@@ -2,11 +2,14 @@ package am.vector.payroll.api.v1.controller;
 
 import am.vector.payroll.api.v1.service.PersonService;
 import am.vector.payroll.api.v1.service.WorkdayService;
+import am.vector.payroll.entity.Workday;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @CrossOrigin("*")
@@ -23,6 +26,13 @@ public class WorkdayController extends APIController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/search/{START}/{END}")
     public String findAll(@PathVariable String START, @PathVariable String END){
-        return gson.toJson(workdayService.getDateRange(LocalDate.parse(START), LocalDate.parse(END)));
+        LocalDate start = LocalDate.parse(START);
+        LocalDate end = LocalDate.parse(END);
+        return gson.toJson(workdayService.getDateRange(start, end));
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/{DAY}")
+    public String getDay(@PathVariable String DAY){
+        return gson.toJson(workdayService.getWorkday(LocalDate.parse(DAY)));
     }
 }
